@@ -1,4 +1,9 @@
 
+no terminal:
+     npx create-react-app whatsappclone
+     npm install firebase
+     npm install @material-ui/core @material-ui/icons
+     npm install emoji-picker-react
 
 
 
