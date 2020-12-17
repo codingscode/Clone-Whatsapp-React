@@ -4,7 +4,10 @@ import './App.css'
 export default function App() {
 
       return (
-          <div>Oi Whatsapp</div>
+          <div className="app-janela">
+              <div className="barralateral">****</div>
+              <div className="areaconteudo">****</div>
+          </div>
       )
 }
 
