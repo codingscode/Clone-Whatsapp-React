@@ -1,6 +1,11 @@
 import React from 'react'
 import './App.css'
 import avatar1 from './imagens/avatar-1.png'
+import DonutLargeIcon from '@material-ui/icons/DonutLarge'
+import ChatIcon from '@material-ui/icons/Chat'
+import MoreVertIcon from '@material-ui/icons/MoreVert'
+
+
 
 export default function App() {
 
@@ -9,7 +14,17 @@ export default function App() {
               <div className="barralateral">
                   <header>
                       <img className="cabecalho--avatar" src={avatar1} alt="avatar" />
-                      <div className="cabecalho--botoes">botoes</div>
+                      <div className="cabecalho--botoes">
+                          <div className="cabecalho--botao">
+                              <DonutLargeIcon style={{color: '#919191'}} />
+                          </div>
+                          <div className="cabecalho--botao">
+                              <ChatIcon style={{color: '#919191'}} />
+                          </div>
+                          <div className="cabecalho--botao">
+                              <MoreVertIcon style={{color: '#919191'}} />
+                          </div>
+                      </div>
                   </header>
                   <div className="pesquisa">***</div>
                   <div className="listaconversas">***</div>

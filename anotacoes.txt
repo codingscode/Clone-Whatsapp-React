@@ -6,8 +6,12 @@ no terminal:
      npm install emoji-picker-react
 
 
-
-
+https://material-ui.com/pt/
+    https://material-ui.com/pt/components/icons/
+        https://material-ui.com/pt/components/material-icons/
+        pesquisar donutlarge :   import DonutLargeIcon from '@material-ui/icons/DonutLarge';
+                                 import ChatIcon from '@material-ui/icons/Chat';
+                                 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 
 
