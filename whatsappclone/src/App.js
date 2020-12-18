@@ -4,6 +4,7 @@ import avatar1 from './imagens/avatar-1.png'
 import DonutLargeIcon from '@material-ui/icons/DonutLarge'
 import ChatIcon from '@material-ui/icons/Chat'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import SearchIcon from '@material-ui/icons/Search'
 
 
 
@@ -26,7 +27,12 @@ export default function App() {
                           </div>
                       </div>
                   </header>
-                  <div className="pesquisa">***</div>
+                  <div className="pesquisa">
+                      <div className="pesquisa--entrada">
+                          <SearchIcon fontSize="small" style={{color: '#919191'}} />
+                          <input type="search" placeholder="Procurar ou começar uma nova conversa" />
+                      </div>
+                  </div>
                   <div className="listaconversas">***</div>
               </div>
               <div className="areaconteudo">****</div>

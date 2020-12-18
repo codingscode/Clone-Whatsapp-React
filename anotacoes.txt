@@ -12,6 +12,8 @@ https://material-ui.com/pt/
         pesquisar donutlarge :   import DonutLargeIcon from '@material-ui/icons/DonutLarge';
                                  import ChatIcon from '@material-ui/icons/Chat';
                                  import MoreVertIcon from '@material-ui/icons/MoreVert';
+                                 import SearchIcon from '@material-ui/icons/Search';
+                                 
 
 
 
