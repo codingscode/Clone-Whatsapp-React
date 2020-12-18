@@ -27,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
  
 .cabecalho--avatar {
@@ -34,6 +35,10 @@ header {
     height: 50px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.cabecalho--botoes {
+    display: flex;
 }
 
 .areaconteudo {
