@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import avatar1 from './imagens/avatar-1.png'
 import DonutLargeIcon from '@material-ui/icons/DonutLarge'
 import ChatIcon from '@material-ui/icons/Chat'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import SearchIcon from '@material-ui/icons/Search'
+import ItemListaConversa from './components/itemListaConversa'
 
 
 
 export default function App() {
+
+      const [listaconversas, setListaconversas] = useState([{}, {}, {}, {}])
 
       return (
           <div className="app-janela">
@@ -33,7 +36,11 @@ export default function App() {
                           <input type="search" placeholder="Procurar ou começar uma nova conversa" />
                       </div>
                   </div>
-                  <div className="listaconversas">***</div>
+                  <div className="listaconversas">
+                      {listaconversas.map((cada, chave) => (
+                          <ItemListaConversa key={chave} />
+                      ))}
+                  </div>
               </div>
               <div className="areaconteudo">****</div>
           </div>
