@@ -6,7 +6,7 @@ import ChatIcon from '@material-ui/icons/Chat'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import SearchIcon from '@material-ui/icons/Search'
 import ItemListaConversa from './components/itemListaConversa'
-
+import IntroConversa from './components/IntroConversa.js'
 
 
 export default function App() {
@@ -42,7 +42,9 @@ export default function App() {
                       ))}
                   </div>
               </div>
-              <div className="areaconteudo">****</div>
+              <div className="areaconteudo">
+                  <IntroConversa />
+              </div>
           </div>
       )
 }

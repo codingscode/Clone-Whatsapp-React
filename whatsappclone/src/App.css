@@ -86,7 +86,7 @@ header {
 }
 
 .listaconversas::-webkit-scrollbar-thumb {
-    background-color: #FF0000;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .areaconteudo {
