@@ -11,7 +11,7 @@ import ItemListaConversa from './components/itemListaConversa'
 
 export default function App() {
 
-      const [listaconversas, setListaconversas] = useState([{}, {}, {}, {}])
+      const [listaconversas, setListaconversas] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
 
       return (
           <div className="app-janela">

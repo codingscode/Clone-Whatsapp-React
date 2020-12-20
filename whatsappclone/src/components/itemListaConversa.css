@@ -4,6 +4,10 @@
     align-items: center;
     height: 70px;
 }
+
+.itemListaConversa:hover {
+    background-color: #F5F5F5;
+}
  
 .itemListaConversa--avatar {
     width: 50px;
