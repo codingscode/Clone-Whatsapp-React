@@ -46,3 +46,13 @@
     width: 100%;
 }
 
+.itemListaConversa--ultimaMsg p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+
+}
+
+
+

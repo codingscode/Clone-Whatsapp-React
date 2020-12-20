@@ -15,7 +15,7 @@ export default function ItemListaConversa () {
                     </div>
                     <div className="itemListaConversa--linha" >
                         <div className="itemListaConversa--ultimaMsg">
-                            <p>Opa, tudo bem ?</p>
+                            <p>Quanto tempo demora para aprender programar ? Quanto tempo demora para aprender programar ? Quanto tempo demora para aprender programar ?</p>
                         </div>
                     </div>
                </div>
