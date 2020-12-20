@@ -80,6 +80,14 @@ header {
     overflow-y: auto;
 }
 
+.listaconversas::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.listaconversas::-webkit-scrollbar-thumb {
+    background-color: #FF0000;
+}
 
 .areaconteudo {
 
