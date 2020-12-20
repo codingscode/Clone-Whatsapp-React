@@ -20,6 +20,10 @@
     border-bottom: 1px solid #EEE;
     padding-right: 15px;
     margin-left: 15px;
+
+    
+    flex-wrap: wrap;
+    min-width: 0;
 }
  
 .itemListaConversa--linha {
