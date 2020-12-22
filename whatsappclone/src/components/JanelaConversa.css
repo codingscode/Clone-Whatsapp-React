@@ -30,13 +30,22 @@
     font-size: 17px;
     color: #000;
 }
- 
+
 .janelaconversa--cabecbotoes {
- 
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
 }
  
 .janelaconversa--botao {
- 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
 }
  
 .janelaconversa--corpo {
