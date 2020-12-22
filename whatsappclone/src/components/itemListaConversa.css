@@ -8,6 +8,10 @@
 .itemListaConversa:hover {
     background-color: #F5F5F5;
 }
+
+.itemListaConversa.ativo {
+    background-color: #EBEBEB;
+}
  
 .itemListaConversa--avatar {
     width: 50px;
