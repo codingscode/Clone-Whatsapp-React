@@ -45,7 +45,7 @@ export default function App() {
                   </div>
                   <div className="listaconversas">
                       {listaconversas.map((cada, chave) => (
-                          <ItemListaConversa key={chave} onClick={() => setConversaAtiva(listaconversas[chave])}/>
+                          <ItemListaConversa key={chave} clicar={() => setConversaAtiva(listaconversas[chave])}/>
                       ))}
                   </div>
               </div>
