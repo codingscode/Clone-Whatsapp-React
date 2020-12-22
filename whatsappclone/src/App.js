@@ -8,15 +8,16 @@ import SearchIcon from '@material-ui/icons/Search'
 import ItemListaConversa from './components/itemListaConversa'
 import IntroConversa from './components/IntroConversa.js'
 import JanelaConversa from './components/JanelaConversa'
+import avatar from './imagens/avatar-3.png'
 
 
 export default function App() {
 
       const [listaconversas, setListaconversas] = useState([
-          {chatId: 1, titulo: 'Fulanis', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'},
-          {chatId: 2, titulo: 'Ciclanis', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'},
-          {chatId: 3, titulo: 'Beltranis', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'},
-          {chatId: 4, titulo: 'Carinha', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'}
+          {chatId: 1, titulo: 'Fulanis', imagem: avatar},
+          {chatId: 2, titulo: 'Ciclanis', imagem: avatar},
+          {chatId: 3, titulo: 'Beltranis', imagem: avatar},
+          {chatId: 4, titulo: 'Carinha', imagem: avatar}
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
 
@@ -45,7 +46,10 @@ export default function App() {
                   </div>
                   <div className="listaconversas">
                       {listaconversas.map((cada, chave) => (
-                          <ItemListaConversa key={chave} ativo={conversaAtiva.chatId === listaconversas[chave].chatId} clicar={() => setConversaAtiva(listaconversas[chave])}/>
+                          <ItemListaConversa key={chave}
+                                             dados={cada}
+                                             ativo={conversaAtiva.chatId === listaconversas[chave].chatId}
+                                             clicar={() => setConversaAtiva(listaconversas[chave])}/>
                       ))}
                   </div>
               </div>
