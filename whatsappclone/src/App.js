@@ -7,11 +7,13 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import SearchIcon from '@material-ui/icons/Search'
 import ItemListaConversa from './components/itemListaConversa'
 import IntroConversa from './components/IntroConversa.js'
+import JanelaConversa from './components/JanelaConversa'
 
 
 export default function App() {
 
       const [listaconversas, setListaconversas] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
+      const [conversaAtiva, setConversaAtiva] = useState({})
 
       return (
           <div className="app-janela">
@@ -43,7 +45,12 @@ export default function App() {
                   </div>
               </div>
               <div className="areaconteudo">
-                  <IntroConversa />
+                  {conversaAtiva.chatId !== undefined &&
+                      <JanelaConversa />
+                  }
+                  {conversaAtiva.chatId === undefined &&
+                      <IntroConversa />
+                  }
               </div>
           </div>
       )
