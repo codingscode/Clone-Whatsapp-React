@@ -3,10 +3,10 @@ import './itemListaConversa.css'
 import avatar from '../imagens/avatar-1.png'
 
 
-export default function ItemListaConversa () {
+export default function ItemListaConversa ({onClick}) {
 
       return (
-          <div className="itemListaConversa">
+          <div className="itemListaConversa" onClick={onClick}>
                <img className="itemListaConversa--avatar" src={avatar} alt="avatar" />
                <div className="itemListaConversa--linhas">
                     <div className="itemListaConversa--linha" >

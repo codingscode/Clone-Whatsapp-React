@@ -12,7 +12,12 @@ import JanelaConversa from './components/JanelaConversa'
 
 export default function App() {
 
-      const [listaconversas, setListaconversas] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
+      const [listaconversas, setListaconversas] = useState([
+          {chatId: 1, titulo: 'Fulanis', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'},
+          {chatId: 2, titulo: 'Ciclanis', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'},
+          {chatId: 3, titulo: 'Beltranis', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'},
+          {chatId: 4, titulo: 'Carinha', imagem: 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'}
+      ])
       const [conversaAtiva, setConversaAtiva] = useState({})
 
       return (
@@ -40,7 +45,7 @@ export default function App() {
                   </div>
                   <div className="listaconversas">
                       {listaconversas.map((cada, chave) => (
-                          <ItemListaConversa key={chave} />
+                          <ItemListaConversa key={chave} onClick={() => setConversaAtiva(listaconversas[chave])}/>
                       ))}
                   </div>
               </div>
