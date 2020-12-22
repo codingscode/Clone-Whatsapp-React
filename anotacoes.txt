@@ -19,7 +19,9 @@ experimentar clicar nos chats *idem
 
 experimentar clicar nos chats *idem
 
-
+import SearchIcon from '@material-ui/icons/Search';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 
 
