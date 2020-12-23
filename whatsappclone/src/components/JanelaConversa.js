@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EmojiPicker from 'emoji-picker-react'
 import './JanelaConversa.css'
 import SearchIcon from '@material-ui/icons/Search'
@@ -13,9 +13,11 @@ import MicIcon from '@material-ui/icons/Mic'
 
 
 export default function JanelaConversa() {
+
+      const [emojiAberto, setEmojiAberto] = useState(false)  // experimentar trocar por true
       
       const gerenEmojiClique = () => {
-          
+
       }
 
       return (
@@ -39,7 +41,7 @@ export default function JanelaConversa() {
                </div>
                <div className="janelaconversa--corpo"></div>
 
-               <div className="janelaconversa--areaemoji">
+               <div className="janelaconversa--areaemoji" style={{height: emojiAberto ? '200px' : '0px' }} >
                     <EmojiPicker disableSearchBar disableSkinTonePicker onEmojiClick={gerenEmojiClique} />
                </div>
 

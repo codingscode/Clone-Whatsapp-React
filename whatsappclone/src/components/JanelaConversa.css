@@ -93,6 +93,7 @@
 .janelaconversa--areaemoji {
     height: 200px;
     overflow-y: hidden;
+    transition: all ease .4s;
 }
 
 aside.emoji-picker-react {
