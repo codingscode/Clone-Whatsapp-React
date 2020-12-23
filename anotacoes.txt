@@ -33,5 +33,7 @@ EmojiPicker já vem com a classe emoji-picker-react
 
 Abre e fecha o selecionador de emojins
 
+clicar em algum emoji e ver o console
+
 
 

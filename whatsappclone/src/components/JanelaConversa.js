@@ -15,9 +15,10 @@ import MicIcon from '@material-ui/icons/Mic'
 export default function JanelaConversa() {
 
       const [emojiAberto, setEmojiAberto] = useState(false)
+      const [texto, setTexto] = useState('')
       
-      const gerenEmojiClique = () => {
-
+      const gerenEmojiClique = (evento, emojiObject) => {
+          console.log(emojiObject)
       }
 
       const gerenAbrirEmoji = () => {
@@ -63,7 +64,11 @@ export default function JanelaConversa() {
                         </div>
                     </div>
                     <div className="janelaconversa--areaentrada">
-                        <input className="janelaconversa--entrada" type="text" placeholder="Digite uma mensagem" />
+                        <input className="janelaconversa--entrada" 
+                               type="text" 
+                               placeholder="Digite uma mensagem" 
+                               value={texto} 
+                               onChange={evento => setTexto(evento.target.value)} />
                     </div>
                     <div className="janelaconversa--pos">
                         <div className="janelaconversa--botao">
