@@ -29,6 +29,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import SendIcon from '@material-ui/icons/Send';
 import MicIcon from '@material-ui/icons/Mic';
 
+EmojiPicker já vem com a classe emoji-picker-react
 
 
 
