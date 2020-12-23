@@ -38,6 +38,9 @@ export default function JanelaConversa() {
                <div className="janelaconversa--rodape">
                     <div className="janelaconversa--pre">
                         <div className="janelaconversa--botao">
+                            <CloseIcon style={{color: '#919191'}} />
+                        </div>
+                        <div className="janelaconversa--botao">
                             <InsertEmoticonIcon style={{color: '#919191'}} />
                         </div>
                     </div>
