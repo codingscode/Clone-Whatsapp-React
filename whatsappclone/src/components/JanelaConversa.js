@@ -42,7 +42,7 @@ export default function JanelaConversa() {
                         </div>
                     </div>
                     <div className="janelaconversa--areaentrada">
-                        <input className="janelaconversa--entrada" type="text" />
+                        <input className="janelaconversa--entrada" type="text" placeholder="Digite uma mensagem" />
                     </div>
                     <div className="janelaconversa--pos">
                         <div className="janelaconversa--botao">

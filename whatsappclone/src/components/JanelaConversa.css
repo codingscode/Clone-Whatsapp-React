@@ -66,6 +66,7 @@
  
 .janelaconversa--pre {
     display: flex;
+    margin: 0 15px;
  }
  
  .janelaconversa--areaentrada {
@@ -86,6 +87,7 @@
  
  .janelaconversa--pos {
     display: flex;
+    margin: 0 15px;
  }
 
 
