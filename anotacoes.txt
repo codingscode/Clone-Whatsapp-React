@@ -37,5 +37,7 @@ clicar em algum emoji e ver o console
 
 os emojins aparecem no texto
 
+digitar alguma coisa. send e mic alternam
+
 
 

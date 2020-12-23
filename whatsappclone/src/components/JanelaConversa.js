@@ -72,9 +72,16 @@ export default function JanelaConversa() {
                                onChange={evento => setTexto(evento.target.value)} />
                     </div>
                     <div className="janelaconversa--pos">
-                        <div className="janelaconversa--botao">
-                            <SendIcon style={{color: '#919191'}} />
-                        </div>
+                        {texto == '' &&
+                            <div className="janelaconversa--botao">
+                                <MicIcon style={{color: '#919191'}} />
+                            </div>
+                        }
+                        {texto !== '' &&
+                            <div className="janelaconversa--botao">
+                                <SendIcon style={{color: '#919191'}} />
+                            </div>
+                        }
                     </div>
                </div>
           </div>
