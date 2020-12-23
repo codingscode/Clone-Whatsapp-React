@@ -14,10 +14,18 @@ import MicIcon from '@material-ui/icons/Mic'
 
 export default function JanelaConversa() {
 
-      const [emojiAberto, setEmojiAberto] = useState(false)  // experimentar trocar por true
+      const [emojiAberto, setEmojiAberto] = useState(false)
       
       const gerenEmojiClique = () => {
 
+      }
+
+      const gerenAbrirEmoji = () => {
+         setEmojiAberto(true)
+      }
+     
+      const gerenFecharEmoji = () => {
+         setEmojiAberto(false)
       }
 
       return (
@@ -47,10 +55,10 @@ export default function JanelaConversa() {
 
                <div className="janelaconversa--rodape">
                     <div className="janelaconversa--pre">
-                        <div className="janelaconversa--botao">
+                        <div className="janelaconversa--botao" onClick={gerenFecharEmoji} >
                             <CloseIcon style={{color: '#919191'}} />
                         </div>
-                        <div className="janelaconversa--botao">
+                        <div className="janelaconversa--botao" onClick={gerenAbrirEmoji} >
                             <InsertEmoticonIcon style={{color: '#919191'}} />
                         </div>
                     </div>

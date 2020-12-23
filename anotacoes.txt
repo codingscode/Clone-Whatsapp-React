@@ -31,7 +31,7 @@ import MicIcon from '@material-ui/icons/Mic';
 
 EmojiPicker já vem com a classe emoji-picker-react
 
-
+Abre e fecha o selecionador de emojins
 
 
 
