@@ -59,7 +59,7 @@ export default function JanelaConversa() {
                             <CloseIcon style={{color: '#919191'}} />
                         </div>
                         <div className="janelaconversa--botao" onClick={gerenAbrirEmoji} >
-                            <InsertEmoticonIcon style={{color: '#919191'}} />
+                            <InsertEmoticonIcon style={{color: emojiAberto ? '#009688' : '#919191'}} />
                         </div>
                     </div>
                     <div className="janelaconversa--areaentrada">
