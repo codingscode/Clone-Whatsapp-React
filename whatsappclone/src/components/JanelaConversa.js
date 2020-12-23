@@ -33,13 +33,12 @@ export default function JanelaConversa() {
                          </div>
                     </div>
                </div>
-               <div className="janelaconversa--corpo">
-
+               <div className="janelaconversa--corpo"></div>
+               
                <div className="janelaconversa--areaemoji">
                     <EmojiPicker />
                </div>
 
-               </div>
                <div className="janelaconversa--rodape">
                     <div className="janelaconversa--pre">
                         <div className="janelaconversa--botao">
