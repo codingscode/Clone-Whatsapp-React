@@ -85,10 +85,14 @@
     padding-left: 15px;
  }
  
- .janelaconversa--pos {
+.janelaconversa--pos {
     display: flex;
     margin: 0 15px;
- }
+}
+
+.janelaconversa--areaemoji {
+    height: 200px;
+}
 
 aside.emoji-picker-react {
     width: auto;
