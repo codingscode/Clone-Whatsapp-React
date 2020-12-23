@@ -1,4 +1,5 @@
 import React from 'react'
+import EmojiPicker from 'emoji-picker-react'
 import './JanelaConversa.css'
 import SearchIcon from '@material-ui/icons/Search'
 import AttachFileIcon from '@material-ui/icons/AttachFile'
@@ -33,6 +34,10 @@ export default function JanelaConversa() {
                     </div>
                </div>
                <div className="janelaconversa--corpo">
+
+               <div className="janelaconversa--areaemoji">
+                    <EmojiPicker />
+               </div>
 
                </div>
                <div className="janelaconversa--rodape">
