@@ -35,5 +35,7 @@ Abre e fecha o selecionador de emojins
 
 clicar em algum emoji e ver o console
 
+os emojins aparecem no texto
+
 
 

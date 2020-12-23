@@ -19,6 +19,7 @@ export default function JanelaConversa() {
       
       const gerenEmojiClique = (evento, emojiObject) => {
           console.log(emojiObject)
+          setTexto(texto + emojiObject.emoji)
       }
 
       const gerenAbrirEmoji = () => {
