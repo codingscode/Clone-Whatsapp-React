@@ -13,6 +13,10 @@ import MicIcon from '@material-ui/icons/Mic'
 
 
 export default function JanelaConversa() {
+      
+      const gerenEmojiClique = () => {
+          
+      }
 
       return (
           <div className="janelaconversa">
@@ -34,9 +38,9 @@ export default function JanelaConversa() {
                     </div>
                </div>
                <div className="janelaconversa--corpo"></div>
-               
+
                <div className="janelaconversa--areaemoji">
-                    <EmojiPicker />
+                    <EmojiPicker disableSearchBar disableSkinTonePicker onEmojiClick={gerenEmojiClique} />
                </div>
 
                <div className="janelaconversa--rodape">
