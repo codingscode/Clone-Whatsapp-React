@@ -55,7 +55,7 @@ export default function JanelaConversa() {
 
                <div className="janelaconversa--rodape">
                     <div className="janelaconversa--pre">
-                        <div className="janelaconversa--botao" onClick={gerenFecharEmoji} >
+                        <div className="janelaconversa--botao" onClick={gerenFecharEmoji} style={{width: emojiAberto ? 40 : 0}} >
                             <CloseIcon style={{color: '#919191'}} />
                         </div>
                         <div className="janelaconversa--botao" onClick={gerenAbrirEmoji} >
