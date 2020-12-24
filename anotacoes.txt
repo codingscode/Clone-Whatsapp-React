@@ -39,5 +39,6 @@ os emojins aparecem no texto
 
 digitar alguma coisa. send e mic alternam
 
+falar alguma coisa no microfone
 
 

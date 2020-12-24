@@ -16,6 +16,14 @@ export default function JanelaConversa() {
 
       const [emojiAberto, setEmojiAberto] = useState(false)
       const [texto, setTexto] = useState('')
+      const [ouvindo, setOuvindo] = useState(false)
+
+      let reconhecimento = null
+      let reconhecerFala = window.SpeechRecognition || window.webkitSpeechRecognition
+
+      if (reconhecerFala !== undefined) {
+         reconhecimento = new reconhecerFala()
+      }
       
       const gerenEmojiClique = (evento, emojiObject) => {
           console.log(emojiObject)
@@ -28,6 +36,27 @@ export default function JanelaConversa() {
      
       const gerenFecharEmoji = () => {
          setEmojiAberto(false)
+      }
+
+      const gerenClicarEnviar = () => {
+          
+      }
+
+      const gerenClicarMic = () => {
+        if (reconhecimento !== null) {
+   
+            reconhecimento.onstart = () => {
+               setOuvindo(true)
+            }
+            reconhecimento.onend = () => {
+               setOuvindo(false)
+            }
+            reconhecimento.onresult = (evento) => {
+               setTexto(evento.results[0][0].transcript)
+            }
+         
+            reconhecimento.start()
+        }
       }
 
       return (
@@ -73,12 +102,12 @@ export default function JanelaConversa() {
                     </div>
                     <div className="janelaconversa--pos">
                         {texto == '' &&
-                            <div className="janelaconversa--botao">
-                                <MicIcon style={{color: '#919191'}} />
+                            <div className="janelaconversa--botao" onClick={gerenClicarMic}>
+                                <MicIcon style={{color: ouvindo ? '#126ECE' : '#919191'}} />
                             </div>
                         }
                         {texto !== '' &&
-                            <div className="janelaconversa--botao">
+                            <div className="janelaconversa--botao" onClick={gerenClicarEnviar}>
                                 <SendIcon style={{color: '#919191'}} />
                             </div>
                         }
