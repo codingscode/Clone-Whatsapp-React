@@ -1,0 +1,21 @@
+.linhamensagem {
+    margin-bottom: 10px;
+    display: flex;
+}
+ 
+.itemMensagem {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #CCC;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+ 
+.textomensagem {
+ 
+}
+ 
+.datamensagem {
+ 
+}
