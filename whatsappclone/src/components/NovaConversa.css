@@ -19,13 +19,29 @@
 }
 
 .novaconversa--botaovoltar {
-
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 .novaconversa--titulocabecalho {
-    
+    font-size: 19px;
+    height: 40px;
+    line-height: 40px;
+    flex: 1;
+    font-weight: bold;
+    color: #FFF;
+    margin-left: 20px;
 }
 .novaconversa--lista {
-    
+
 }
+
+
+
+
+
 
 
