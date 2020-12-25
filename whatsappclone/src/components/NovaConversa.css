@@ -11,5 +11,21 @@
     border-right: 1px solid #DDD;
 }
 
+.novaconversa--cabecalho {
+    display: flex;
+    background-color: #00BFA5;
+    align-items: center;
+    padding: 60px 15px 15px 15px;
+}
+
+.novaconversa--botaovoltar {
+
+}
+.novaconversa--titulocabecalho {
+    
+}
+.novaconversa--lista {
+    
+}
 
 
