@@ -17,7 +17,9 @@ export default function JanelaConversa() {
       const [emojiAberto, setEmojiAberto] = useState(false)
       const [texto, setTexto] = useState('')
       const [ouvindo, setOuvindo] = useState(false)
-      const [lista, setLista] = useState([{}, {}, {}])
+      const [lista, setLista] = useState([
+           {corpo: 'bla bla bla'}, {corpo: 'bla bla'}, {corpo: 'bla bla bla bla'}
+      ])
 
 
       let reconhecimento = null

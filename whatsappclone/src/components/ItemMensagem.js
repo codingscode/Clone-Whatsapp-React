@@ -1,12 +1,12 @@
 import React from 'react'
 import './ItemMensagem.css'
 
-export default function ItemMensagem () {
+export default function ItemMensagem ({ dados }) {
 
      return (
-         <div className="linhamensagem">
+         <div className="linhamensagem" style={{justifyContent: 'flex-end'}} >
               <div className="itemMensagem">
-                  <div className="textomensagem">Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</div>
+                  <div className="textomensagem">{dados.corpo}</div>
                   <div className="datamensagem">19:00</div>
               </div>
          </div>
