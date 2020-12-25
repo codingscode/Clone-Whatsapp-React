@@ -4,7 +4,12 @@ import './ItemMensagem.css'
 export default function ItemMensagem () {
 
      return (
-         <div>...</div>
+         <div className="linhamensagem">
+              <div className="itemMensagem">
+                  <div className="textomensagem">Bla bla bla</div>
+                  <div className="datamensagem">19:00</div>
+              </div>
+         </div>
      )
 }
 
