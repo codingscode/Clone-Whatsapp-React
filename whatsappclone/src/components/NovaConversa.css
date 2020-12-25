@@ -56,6 +56,10 @@
     cursor: pointer;
 }
 
+.novaconversa--item:hover {
+    background-color: #F5F5F5;
+}
+
 .novaconversa--itemavatar {
     width: 50px;
     height: 50px;
