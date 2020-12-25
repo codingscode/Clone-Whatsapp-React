@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './NovaConversa.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-/* import avatares from '../imagens/' */
+
 
 export default function NovaConversa({ avatares }) {
 
