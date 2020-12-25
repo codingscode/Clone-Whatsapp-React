@@ -36,10 +36,18 @@
     margin-left: 20px;
 }
 .novaconversa--lista {
-
+    flex: 1;
+    overflow-y: auto;
 }
 
+.novaconversa--lista::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
 
+.novaconversa--lista::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 
 
