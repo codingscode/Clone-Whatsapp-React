@@ -43,4 +43,6 @@ falar alguma coisa no microfone
 
 não mostra ainda
 
+aparece alguma coisa
+
 
