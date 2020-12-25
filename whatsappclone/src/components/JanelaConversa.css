@@ -56,7 +56,7 @@
     background-size: cover;
     background-position: center;
     background-image: url('../imagens/fundo.png');
-    
+    padding: 20px 30px;
 }
   
 .janelaconversa--rodape {
