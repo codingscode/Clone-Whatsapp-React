@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import EmojiPicker from 'emoji-picker-react'
 import './JanelaConversa.css'
 import SearchIcon from '@material-ui/icons/Search'
@@ -13,6 +13,8 @@ import ItemMensagem from './ItemMensagem.js'
 
 
 export default function JanelaConversa({ usuario }) {
+
+      const corpo = useRef()
 
       const [emojiAberto, setEmojiAberto] = useState(false)
       const [texto, setTexto] = useState('')
@@ -48,6 +50,12 @@ export default function JanelaConversa({ usuario }) {
       if (reconhecerFala !== undefined) {
          reconhecimento = new reconhecerFala()
       }
+
+      useEffect(() => {
+        if (corpo.current.scrollHeight > corpo.current.offsetHeight) {
+            corpo.current.scrollTop = corpo.current.scrollHeight - corpo.current.offsetHeight
+        }
+      }, [lista])
       
       const gerenEmojiClique = (evento, emojiObject) => {
           console.log(emojiObject)
@@ -102,7 +110,7 @@ export default function JanelaConversa({ usuario }) {
                          </div>
                     </div>
                </div>
-               <div className="janelaconversa--corpo">
+               <div ref={corpo} className="janelaconversa--corpo">
                     {lista.map((cada, chave) => (
                         <ItemMensagem chave={chave} dados={cada} usuario={usuario} />
                     ))}
