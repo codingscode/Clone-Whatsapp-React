@@ -9,7 +9,7 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 import CloseIcon from '@material-ui/icons/Close'
 import SendIcon from '@material-ui/icons/Send'
 import MicIcon from '@material-ui/icons/Mic'
-
+import ItemMensagem from './ItemMensagem.js'
 
 
 export default function JanelaConversa() {
@@ -17,6 +17,8 @@ export default function JanelaConversa() {
       const [emojiAberto, setEmojiAberto] = useState(false)
       const [texto, setTexto] = useState('')
       const [ouvindo, setOuvindo] = useState(false)
+      const [lista, setLista] = useState([])
+
 
       let reconhecimento = null
       let reconhecerFala = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -78,7 +80,11 @@ export default function JanelaConversa() {
                          </div>
                     </div>
                </div>
-               <div className="janelaconversa--corpo"></div>
+               <div className="janelaconversa--corpo">
+                    {lista.map((cada, chave) => (
+                        <ItemMensagem chave={chave} dados={cada} />
+                    ))}
+               </div>
 
                <div className="janelaconversa--areaemoji" style={{height: emojiAberto ? '200px' : '0px' }} >
                     <EmojiPicker disableSearchBar disableSkinTonePicker onEmojiClick={gerenEmojiClique} />

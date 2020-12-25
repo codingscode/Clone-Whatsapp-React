@@ -41,4 +41,6 @@ digitar alguma coisa. send e mic alternam
 
 falar alguma coisa no microfone
 
+não mostra ainda
+
 
