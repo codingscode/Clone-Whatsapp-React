@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import avatar1 from './imagens/avatar-1.png'
+
 import DonutLargeIcon from '@material-ui/icons/DonutLarge'
 import ChatIcon from '@material-ui/icons/Chat'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
@@ -10,6 +10,7 @@ import IntroConversa from './components/IntroConversa.js'
 import JanelaConversa from './components/JanelaConversa'
 import avatar from './imagens/avatar-3.png'
 import perfil from './imagens/avatar-4.png'
+import NovaConversa from './components/NovaConversa'
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
       return (
           <div className="app-janela">
               <div className="barralateral">
+                  <NovaConversa />
                   <header>
                       <img className="cabecalho--avatar" src={usuario.avatar} alt="avatar" />
                       <div className="cabecalho--botoes">
