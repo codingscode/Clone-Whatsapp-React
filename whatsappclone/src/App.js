@@ -9,6 +9,7 @@ import ItemListaConversa from './components/itemListaConversa'
 import IntroConversa from './components/IntroConversa.js'
 import JanelaConversa from './components/JanelaConversa'
 import avatar from './imagens/avatar-3.png'
+import perfil from './imagens/avatar-4.png'
 
 
 export default function App() {
@@ -20,12 +21,13 @@ export default function App() {
           {chatId: 4, titulo: 'Carinha', imagem: avatar}
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
+      const [usuario, setUsuario] = useState({ id: 1234, avatar: perfil, nome: 'Heronnes Pereira' })
 
       return (
           <div className="app-janela">
               <div className="barralateral">
                   <header>
-                      <img className="cabecalho--avatar" src={avatar1} alt="avatar" />
+                      <img className="cabecalho--avatar" src={usuario.avatar} alt="avatar" />
                       <div className="cabecalho--botoes">
                           <div className="cabecalho--botao">
                               <DonutLargeIcon style={{color: '#919191'}} />
@@ -55,7 +57,7 @@ export default function App() {
               </div>
               <div className="areaconteudo">
                   {conversaAtiva.chatId !== undefined &&
-                      <JanelaConversa />
+                      <JanelaConversa usuario={usuario}/>
                   }
                   {conversaAtiva.chatId === undefined &&
                       <IntroConversa />
