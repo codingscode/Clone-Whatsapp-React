@@ -84,7 +84,7 @@ export default function JanelaConversa({ usuario }) {
                </div>
                <div className="janelaconversa--corpo">
                     {lista.map((cada, chave) => (
-                        <ItemMensagem chave={chave} dados={cada} />
+                        <ItemMensagem chave={chave} dados={cada} usuario={usuario} />
                     ))}
                </div>
 
