@@ -58,6 +58,15 @@
     background-image: url('../imagens/fundo.png');
     padding: 20px 30px;
 }
+
+.janelaconversa--corpo::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.janelaconversa--corpo::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
   
 .janelaconversa--rodape {
     height: 62px;

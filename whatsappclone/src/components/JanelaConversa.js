@@ -18,7 +18,27 @@ export default function JanelaConversa({ usuario }) {
       const [texto, setTexto] = useState('')
       const [ouvindo, setOuvindo] = useState(false)
       const [lista, setLista] = useState([
-           {autor: 123, corpo: 'bla bla bla'}, {autor: 123, corpo: 'bla bla'}, {autor: 1234, corpo: 'bla bla bla bla'}
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'},
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'},
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'},
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'},
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'},
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'},
+           {autor: 123, corpo: 'bla bla bla'}, 
+           {autor: 123, corpo: 'bla bla'}, 
+           {autor: 1234, corpo: 'bla bla bla bla'}
       ])
 
 
