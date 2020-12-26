@@ -3,7 +3,7 @@ import './NovaConversa.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 
 
-export default function NovaConversa({ avatares }) {
+export default function NovaConversa({ avatares, mostrar, setMostrar, usuario, listaconversas }) {
 
       const [lista, setLista] = useState([
           {id: 123, avatar: avatares[0], nome: 'Heronnes Pereira'},
@@ -13,7 +13,7 @@ export default function NovaConversa({ avatares }) {
       ])
 
       return (
-          <div className="novaconversa">
+          <div className="novaconversa" style={{left: mostrar ? '0' : '-415px'}} >
               <div className="novaconversa--cabecalho">
                   <div className="novaconversa--botaovoltar">
                        <ArrowBackIcon style={{color: '#FFFFFF'}} />

@@ -25,11 +25,17 @@ export default function App() {
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
       const [usuario, setUsuario] = useState({ id: 1234, avatar: avatar4, nome: 'Heronnes Pereira' })
+      const [mostrarNovaConversa, setMostrarNovaConversa] = useState(false)  // experimentrar trocar por true
+
 
       return (
           <div className="app-janela">
               <div className="barralateral">
-                  <NovaConversa avatares={[avatar1, avatar2, avatar3, avatar4]}/>
+                  <NovaConversa avatares={[avatar1, avatar2, avatar3, avatar4]}
+                                usuario={usuario}
+                                listaconversas={listaconversas}
+                                mostrar={mostrarNovaConversa}
+                                setMostrar={setMostrarNovaConversa} />
                   <header>
                       <img className="cabecalho--avatar" src={usuario.avatar} alt="avatar" />
                       <div className="cabecalho--botoes">
