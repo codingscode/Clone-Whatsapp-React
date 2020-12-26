@@ -53,5 +53,18 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 abre a fecha o chat
 
+(1) ir em developers.facebook.com -> criar aplicativo
+     observar 'Login do Facebook' -> em Configurar 
+     -> em URL do site colar 'https://clone-whatsapp-65039.firebaseapp.com/__/auth/handler' -> clicar salvar
+     em Configurações -> Básico -> pegar Chave secreta do aplicativo e colo em 'App secret' de (2)
+
+(2)
+criar conta firebase -> clicar no icone aplicação web -> registrar app (dar nome) 
+    -> copiar o código gerado -> copiar a variavel firebaseConfig -> ir em CloudFirestone -> criar Banco de dados 
+    -> iniciar no modo de teste -> 
+    -> ir em Authentication -> Sign-in method -> ir em Facebook -> observar (1) 
+    -> em (1) pegar ID do aplicativo e colar em 'App ID' -> 
+
+
 
 
