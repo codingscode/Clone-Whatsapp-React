@@ -25,8 +25,11 @@ export default function App() {
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
       const [usuario, setUsuario] = useState({ id: 1234, avatar: avatar4, nome: 'Heronnes Pereira' })
-      const [mostrarNovaConversa, setMostrarNovaConversa] = useState(false)  // experimentrar trocar por true
+      const [mostrarNovaConversa, setMostrarNovaConversa] = useState(false)  
 
+      const gerenNovaConversa = () => {
+          setMostrarNovaConversa(true)
+      }
 
       return (
           <div className="app-janela">
@@ -43,7 +46,7 @@ export default function App() {
                               <DonutLargeIcon style={{color: '#919191'}} />
                           </div>
                           <div className="cabecalho--botao">
-                              <ChatIcon style={{color: '#919191'}} />
+                              <ChatIcon onClick={gerenNovaConversa} style={{color: '#919191'}} />
                           </div>
                           <div className="cabecalho--botao">
                               <MoreVertIcon style={{color: '#919191'}} />

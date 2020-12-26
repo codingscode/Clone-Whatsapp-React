@@ -51,4 +51,7 @@ nova conversa fica na frente
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
+abre a fecha o chat
+
+
 

@@ -12,10 +12,14 @@ export default function NovaConversa({ avatares, mostrar, setMostrar, usuario, l
           {id: 123, avatar: avatares[3], nome: 'Ciclanis'}
       ])
 
+      const gerenFechar = () => {
+         setMostrar(false)
+      }
+
       return (
           <div className="novaconversa" style={{left: mostrar ? '0' : '-415px'}} >
               <div className="novaconversa--cabecalho">
-                  <div className="novaconversa--botaovoltar">
+                  <div onClick={gerenFechar}  className="novaconversa--botaovoltar">
                        <ArrowBackIcon style={{color: '#FFFFFF'}} />
                   </div>
                   <div className="novaconversa--titulocabecalho">Nova Conversa</div>
