@@ -20,13 +20,12 @@ import Api from './Api'
 export default function App() {
 
       const [listaconversas, setListaconversas] = useState([
-          {chatId: 1, titulo: 'Fulanis', imagem: avatar3},
-          {chatId: 2, titulo: 'Ciclanis', imagem: avatar3},
-          {chatId: 3, titulo: 'Beltranis', imagem: avatar3},
-          {chatId: 4, titulo: 'Carinha', imagem: avatar3}
+          
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
-      const [usuario, setUsuario] = useState(null)
+      const [usuario, setUsuario] = useState({
+          id: 'BHIrnrZT0aaX3TrDKADC6qNVC4f2', nome: 'Jwo Pereira', avatar: 'https://graph.facebook.com/3846905492055205/picture'
+      })
       const [mostrarNovaConversa, setMostrarNovaConversa] = useState(false)  
 
       const gerenNovaConversa = () => {

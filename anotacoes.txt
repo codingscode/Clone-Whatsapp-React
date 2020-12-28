@@ -73,7 +73,7 @@ em firebase: -> ir em cloud firestone -> clicar iniciar coleção -> nome coleç
 
 um novo usuario é criado dentro da coleção usuarios
 
-
+depois de logado nao sai
 
 
 
