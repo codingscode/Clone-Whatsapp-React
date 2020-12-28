@@ -32,6 +32,13 @@ export default function App() {
           setMostrarNovaConversa(true)
       }
 
+      useEffect(() => {
+          if (usuario !== null) {
+              let unsub = Api.naListaConversas(usuario.id, setListaconversas)
+              return unsub
+          }
+      }, [usuario])
+
       const gerenDadosLogin = async (u) => {
           let novoUsuario = { id: u.uid, nome: u.displayName, avatar: u.photoURL }
           await Api.adicionarUsuario(novoUsuario)

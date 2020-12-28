@@ -49,5 +49,15 @@ export default {
                 chatId: novaConversa.id, titulo: usuario.nome, imagem: usuario.avatar, com: usuario.id
             })
        })
+    },
+    naListaConversas: (usuarioId, setListaConversa) => {
+        return db.collection('usuarios').doc(usuarioId).onSnapshot((doc) => {
+           if (doc.exists) {
+               let dados = doc.data()
+               if (dados.conversas) {
+                  setListaConversa(dados.conversas)
+               }
+           }
+        })
     }
 }
