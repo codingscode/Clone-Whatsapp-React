@@ -32,5 +32,22 @@ export default {
         })
     
         return lista
+    },
+    adicionarNovaConversa: async (usuario, usuario2) => {
+        let novaConversa = await db.collection('conversas').add({
+            mensagens: [], usuarios: [usuario.id, usuario2.id]
+        })
+    
+        db.collection('usuarios').doc(usuario.id).update({
+            conversas: firebase.firestore.FieldValue.arrayUnion({
+                chatId: novaConversa.id, titulo: usuario2.nome, imagem: usuario2.avatar, com: usuario2.id
+            })
+        })
+
+        db.collection('usuarios').doc(usuario2.id).update({
+            conversas: firebase.firestore.FieldValue.arrayUnion({
+                chatId: novaConversa.id, titulo: usuario.nome, imagem: usuario.avatar, com: usuario.id
+            })
+       })
     }
 }

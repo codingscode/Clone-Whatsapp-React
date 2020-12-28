@@ -77,5 +77,9 @@ depois de logado nao sai
 
 clicar no icone de contatos
 
+em cloud firestone criação de nova coleção chamada 'conversas'
+
+em app clicar em icone chat e depois ver o firebase
+
 
 

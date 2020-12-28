@@ -23,6 +23,12 @@ export default function NovaConversa({ avatares, mostrar, setMostrar, usuario, l
          setMostrar(false)
       }
 
+      const adicionarNovaConversa = async (usuario2) => {
+          await Api.adicionarNovaConversa(usuario, usuario2)
+
+          gerenFechar()
+      }
+
       return (
           <div className="novaconversa" style={{left: mostrar ? '0' : '-415px'}} >
               <div className="novaconversa--cabecalho">
@@ -33,7 +39,7 @@ export default function NovaConversa({ avatares, mostrar, setMostrar, usuario, l
               </div>
               <div className="novaconversa--lista">
               {lista.map((cada, chave) => (
-                    <div className="novaconversa--item" key={chave}>
+                    <div onClick={() => adicionarNovaConversa(cada)} className="novaconversa--item" key={chave}>
                          <img className="novaconversa--itemavatar" src={cada.avatar} alt="avatar" />
                          <div className="novaconversa--itemnome">{cada.nome}</div>
                     </div>
