@@ -18,5 +18,19 @@ export default {
         await db.collection('usuarios').doc(u.id).set({
             nome: u.nome, avatar: u.avatar
         }, {merge: true})
+    },
+    acessarListaContatos: async (usuarioId) => {
+        let lista = []
+    
+        let resultados = await db.collection('usuarios').get()
+        resultados.forEach(cada => {
+           let dados = cada.data()
+    
+           if (cada.id !== usuarioId) {
+              lista.push({ id: cada.id, nome: dados.nome, avatar: dados.avatar })
+           }
+        })
+    
+        return lista
     }
 }

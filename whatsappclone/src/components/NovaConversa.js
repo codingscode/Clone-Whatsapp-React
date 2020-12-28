@@ -1,16 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './NovaConversa.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import Api from '../Api'
 
 
 export default function NovaConversa({ avatares, mostrar, setMostrar, usuario, listaconversas }) {
 
-      const [lista, setLista] = useState([
-          {id: 123, avatar: avatares[0], nome: 'Heronnes Pereira'},
-          {id: 123, avatar: avatares[1], nome: 'Fulanis'},
-          {id: 123, avatar: avatares[2], nome: 'Beltranis'},
-          {id: 123, avatar: avatares[3], nome: 'Ciclanis'}
-      ])
+      const [lista, setLista] = useState([])
+
+      useEffect(() => {
+        const acessarLista = async () => {
+            if (usuario !== null) {
+               let resultados = await Api.acessarListaContatos(usuario.id)
+               setLista(resultados)
+            }
+        }
+        acessarLista()
+    
+      }, [usuario])
 
       const gerenFechar = () => {
          setMostrar(false)

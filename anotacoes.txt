@@ -75,5 +75,7 @@ um novo usuario é criado dentro da coleção usuarios
 
 depois de logado nao sai
 
+clicar no icone de contatos
+
 
 
