@@ -65,6 +65,10 @@ criar conta firebase -> clicar no icone aplicação web -> registrar app (dar no
     -> ir em Authentication -> Sign-in method -> ir em Facebook -> observar (1) 
     -> em (1) pegar ID do aplicativo e colar em 'App ID' -> 
 
+-----------------
+estar logado no facebook
+fazer login no app
+
 
 
 

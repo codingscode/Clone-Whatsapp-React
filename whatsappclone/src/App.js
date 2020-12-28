@@ -13,6 +13,7 @@ import avatar2 from './imagens/avatar-2.png'
 import avatar3 from './imagens/avatar-3.png'
 import avatar4 from './imagens/avatar-4.png'
 import NovaConversa from './components/NovaConversa'
+import Login from './components/Login'
 
 
 export default function App() {
@@ -24,11 +25,23 @@ export default function App() {
           {chatId: 4, titulo: 'Carinha', imagem: avatar3}
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
-      const [usuario, setUsuario] = useState({ id: 1234, avatar: avatar4, nome: 'Heronnes Pereira' })
+      const [usuario, setUsuario] = useState(null)
       const [mostrarNovaConversa, setMostrarNovaConversa] = useState(false)  
 
       const gerenNovaConversa = () => {
           setMostrarNovaConversa(true)
+      }
+
+      const gerenDadosLogin = async (u) => {
+          let novoUsuario = { id: u.uid, nome: u.displayName, avatar: u.photoURL }
+        
+          setUsuario(novoUsuario)
+      }
+
+      if (usuario === null) {
+         return (
+            <Login emReceber={gerenDadosLogin} />
+         )
       }
 
       return (
