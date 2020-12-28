@@ -90,7 +90,7 @@ export default function App() {
               </div>
               <div className="areaconteudo">
                   {conversaAtiva.chatId !== undefined &&
-                      <JanelaConversa usuario={usuario}/>
+                      <JanelaConversa usuario={usuario} dados={conversaAtiva} />
                   }
                   {conversaAtiva.chatId === undefined &&
                       <IntroConversa />

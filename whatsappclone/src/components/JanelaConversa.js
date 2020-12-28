@@ -12,36 +12,14 @@ import MicIcon from '@material-ui/icons/Mic'
 import ItemMensagem from './ItemMensagem.js'
 
 
-export default function JanelaConversa({ usuario }) {
+export default function JanelaConversa({ usuario, dados }) {
 
       const corpo = useRef()
 
       const [emojiAberto, setEmojiAberto] = useState(false)
       const [texto, setTexto] = useState('')
       const [ouvindo, setOuvindo] = useState(false)
-      const [lista, setLista] = useState([
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'},
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'},
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'},
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'},
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'},
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'},
-           {autor: 123, corpo: 'bla bla bla'}, 
-           {autor: 123, corpo: 'bla bla'}, 
-           {autor: 1234, corpo: 'bla bla bla bla'}
-      ])
+      const [lista, setLista] = useState([])
 
 
       let reconhecimento = null
@@ -95,8 +73,8 @@ export default function JanelaConversa({ usuario }) {
           <div className="janelaconversa">
                <div className="janelaconversa--cabecalho">
                     <div className="janelaconversa--cabecalhoinfo">
-                         <img className="janelaconversa--avatar" src={imagem} alt="" />
-                         <div className="janelaconversa--nome">Heronnes Pereira</div>
+                         <img className="janelaconversa--avatar" src={dados.imagem} alt="imagem" />
+                         <div className="janelaconversa--nome">{dados.titulo}</div>
                     </div>
                     <div className="janelaconversa--cabecbotoes">
                          <div className="janelaconversa--botao">
