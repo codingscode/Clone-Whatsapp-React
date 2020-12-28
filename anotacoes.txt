@@ -69,6 +69,11 @@ criar conta firebase -> clicar no icone aplicação web -> registrar app (dar no
 estar logado no facebook
 fazer login no app
 
+em firebase: -> ir em cloud firestone -> clicar iniciar coleção -> nome coleção usuarios, com usuario e avatar
+
+um novo usuario é criado dentro da coleção usuarios
+
+
 
 
 

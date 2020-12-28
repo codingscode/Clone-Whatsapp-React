@@ -14,6 +14,7 @@ import avatar3 from './imagens/avatar-3.png'
 import avatar4 from './imagens/avatar-4.png'
 import NovaConversa from './components/NovaConversa'
 import Login from './components/Login'
+import Api from './Api'
 
 
 export default function App() {
@@ -34,7 +35,7 @@ export default function App() {
 
       const gerenDadosLogin = async (u) => {
           let novoUsuario = { id: u.uid, nome: u.displayName, avatar: u.photoURL }
-        
+          await Api.adicionarUsuario(novoUsuario)
           setUsuario(novoUsuario)
       }
 

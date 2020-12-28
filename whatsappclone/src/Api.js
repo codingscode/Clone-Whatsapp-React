@@ -13,5 +13,10 @@ export default {
         const fornecedor = new firebase.auth.FacebookAuthProvider()
         let resultado = await firebaseApp.auth().signInWithPopup(fornecedor)
         return resultado
+    },
+    adicionarUsuario: async (u) => {
+        await db.collection('usuarios').doc(u.id).set({
+            nome: u.nome, avatar: u.avatar
+        }, {merge: true})
     }
 }
