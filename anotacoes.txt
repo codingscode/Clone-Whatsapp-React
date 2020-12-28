@@ -83,4 +83,10 @@ em app clicar em icone chat e depois ver o firebase
 
 no app já aparece a ultima mensagem em baixo do nome no chat
 
+aparece a hora agora no app
+
+
+
+
+
 
