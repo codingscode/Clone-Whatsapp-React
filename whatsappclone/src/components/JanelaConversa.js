@@ -20,10 +20,12 @@ export default function JanelaConversa({ usuario, dados }) {
       const [texto, setTexto] = useState('')
       const [ouvindo, setOuvindo] = useState(false)
       const [lista, setLista] = useState([])
+      const [usuarios, setUsuarios] = useState([])
+
 
       useEffect(() => {
             setLista([])
-            let unsub = Api.noConteudoConversa(dados.chatId, setLista)
+            let unsub = Api.noConteudoConversa(dados.chatId, setLista, setUsuarios)
             return unsub
       }, [dados.chatId])
     
@@ -56,7 +58,7 @@ export default function JanelaConversa({ usuario, dados }) {
 
       const gerenClicarEnviar = () => {
           if (texto !== '') {
-               Api.enviarMensagem(dados, usuario.id, 'text', texto)
+               Api.enviarMensagem(dados, usuario.id, 'text', texto, usuarios)
                setTexto('')
                setEmojiAberto(false)
           }

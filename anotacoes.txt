@@ -91,7 +91,7 @@ enviar mensagem com 'Enter' ou clicando na secreta
 testar enviar mensagem
 mas nao atualiza a ultima mensagem ainda, nem hora
 
-
+a hora esquerda atualiza, a direita não
 
 
 

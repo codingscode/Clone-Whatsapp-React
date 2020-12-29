@@ -60,15 +60,16 @@ export default {
            }
         })
     },
-    noConteudoConversa: (chatId, setLista) => {
+    noConteudoConversa: (chatId, setLista, setUsuarios) => {
         return db.collection('conversas').doc(chatId).onSnapshot((doc) => {
             if (doc.exists) {
                let dados = doc.data()
                setLista(dados.mensagens)
+               setUsuarios(dados.usuarios)
             }
         })
     },
-    enviarMensagem: (dadosConversa, idUsuario, tipo, corpo) => {
+    enviarMensagem: async (dadosConversa, idUsuario, tipo, corpo, usuarios) => {
         let agora = new Date()
     
         db.collection('conversas').doc(dadosConversa.chatId).update({
@@ -76,5 +77,24 @@ export default {
                tipo: tipo, autor: idUsuario, corpo: corpo, data: agora
            })
         })
+
+        for (let i in usuarios) {
+            let u = await db.collection('usuarios').doc(usuarios[i]).get()
+            let dadosU = u.data()
+        
+            if (dadosU.conversas) {
+                let conversas = [...dadosU.conversas]
+                for (let e in conversas) {
+                    if (conversas[e].chatId == dadosConversa.chatId) {
+                       conversas[e].ultimaMensagem = corpo
+                       conversas[e].dataUltimaMensagem = agora
+                    }
+                }
+        
+                await db.collection('usuarios').doc(usuarios[i]).update({
+                    conversas: conversas
+                })
+            }
+        }
     }
 }
