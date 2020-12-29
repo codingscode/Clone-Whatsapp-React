@@ -55,7 +55,17 @@ export default function JanelaConversa({ usuario, dados }) {
       }
 
       const gerenClicarEnviar = () => {
-          
+          if (texto !== '') {
+               Api.enviarMensagem(dados, usuario.id, 'text', texto)
+               setTexto('')
+               setEmojiAberto(false)
+          }
+      }
+
+      const gerenEntradaTeclado = (evento) => {
+          if (evento.keyCode == 13) {
+              gerenClicarEnviar()
+          }
       }
 
       const gerenClicarMic = () => {
@@ -118,7 +128,8 @@ export default function JanelaConversa({ usuario, dados }) {
                                type="text" 
                                placeholder="Digite uma mensagem" 
                                value={texto} 
-                               onChange={evento => setTexto(evento.target.value)} />
+                               onChange={evento => setTexto(evento.target.value)}
+                               onKeyUp={gerenEntradaTeclado} />
                     </div>
                     <div className="janelaconversa--pos">
                         {texto == '' &&

@@ -67,5 +67,14 @@ export default {
                setLista(dados.mensagens)
             }
         })
+    },
+    enviarMensagem: (dadosConversa, idUsuario, tipo, corpo) => {
+        let agora = new Date()
+    
+        db.collection('conversas').doc(dadosConversa.chatId).update({
+           mensagens: firebase.firestore.FieldValue.arrayUnion({
+               tipo: tipo, autor: idUsuario, corpo: corpo, data: agora
+           })
+        })
     }
 }
