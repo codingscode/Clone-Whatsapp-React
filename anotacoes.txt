@@ -93,7 +93,7 @@ mas nao atualiza a ultima mensagem ainda, nem hora
 
 a hora esquerda atualiza, a direita não
 
-
+a hora direita agora atualiza acompanha
 
 
 
