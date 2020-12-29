@@ -95,6 +95,10 @@ a hora esquerda atualiza, a direita não
 
 a hora direita agora atualiza acompanha
 
+adaptando para começar o usuário sem estar logado
+começa logando
+
+
 
 
 

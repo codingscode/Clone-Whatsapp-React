@@ -23,9 +23,7 @@ export default function App() {
           
       ])
       const [conversaAtiva, setConversaAtiva] = useState({})
-      const [usuario, setUsuario] = useState({
-          id: 'BHIrnrZT0aaX3TrDKADC6qNVC4f2', nome: 'Jwo Pereira', avatar: 'https://graph.facebook.com/3846905492055205/picture'
-      })
+      const [usuario, setUsuario] = useState(null)
       const [mostrarNovaConversa, setMostrarNovaConversa] = useState(false)  
 
       const gerenNovaConversa = () => {
