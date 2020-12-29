@@ -4,12 +4,12 @@ import './JanelaConversa.css'
 import SearchIcon from '@material-ui/icons/Search'
 import AttachFileIcon from '@material-ui/icons/AttachFile'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
-import imagem from '../imagens/avatar-1.png'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 import CloseIcon from '@material-ui/icons/Close'
 import SendIcon from '@material-ui/icons/Send'
 import MicIcon from '@material-ui/icons/Mic'
 import ItemMensagem from './ItemMensagem.js'
+import Api from '../Api'
 
 
 export default function JanelaConversa({ usuario, dados }) {
@@ -21,6 +21,12 @@ export default function JanelaConversa({ usuario, dados }) {
       const [ouvindo, setOuvindo] = useState(false)
       const [lista, setLista] = useState([])
 
+      useEffect(() => {
+            setLista([])
+            let unsub = Api.noConteudoConversa(dados.chatId, setLista)
+            return unsub
+      }, [dados.chatId])
+    
 
       let reconhecimento = null
       let reconhecerFala = window.SpeechRecognition || window.webkitSpeechRecognition

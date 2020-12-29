@@ -59,5 +59,13 @@ export default {
                }
            }
         })
+    },
+    noConteudoConversa: (chatId, setLista) => {
+        return db.collection('conversas').doc(chatId).onSnapshot((doc) => {
+            if (doc.exists) {
+               let dados = doc.data()
+               setLista(dados.mensagens)
+            }
+        })
     }
 }
