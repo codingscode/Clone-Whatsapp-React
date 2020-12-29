@@ -74,7 +74,7 @@ export default function JanelaConversa({ usuario, dados }) {
                <div className="janelaconversa--cabecalho">
                     <div className="janelaconversa--cabecalhoinfo">
                          <img className="janelaconversa--avatar" src={dados.imagem} alt="imagem" />
-                         <div className="janelaconversa--nome">{dados.titulo}</div>
+                         <div className="janelaconversa--nome">{dados.titulo} - {dados.chatId}</div>
                     </div>
                     <div className="janelaconversa--cabecbotoes">
                          <div className="janelaconversa--botao">
