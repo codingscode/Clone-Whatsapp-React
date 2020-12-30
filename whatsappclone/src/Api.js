@@ -55,7 +55,21 @@ export default {
            if (doc.exists) {
                let dados = doc.data()
                if (dados.conversas) {
-                  setListaConversa(dados.conversas)
+                    let conversas = [...dados.conversas]
+
+                    conversas.sort((a, b) => {
+                        if (a.dataUltimaMensagem === undefined) {
+                           return -1
+                        }
+                        if (a.dataUltimaMensagem.seconds < b.dataUltimaMensagem.seconds) {
+                           return 1
+                        }
+                        else {
+                           return -1
+                        }
+                    })
+
+                    setListaConversa(dados.conversas)
                }
            }
         })
