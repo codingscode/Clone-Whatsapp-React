@@ -8,7 +8,7 @@ import firebaseConfig from './firebaseConfig'
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 const db = firebaseApp.firestore()
 
-export default {
+let exportar = {
     fbPopup: async () => {
         const fornecedor = new firebase.auth.FacebookAuthProvider()
         let resultado = await firebaseApp.auth().signInWithPopup(fornecedor)
@@ -43,7 +43,7 @@ export default {
                 chatId: novaConversa.id, titulo: usuario2.nome, imagem: usuario2.avatar, com: usuario2.id
             })
         })
-
+    
         db.collection('usuarios').doc(usuario2.id).update({
             conversas: firebase.firestore.FieldValue.arrayUnion({
                 chatId: novaConversa.id, titulo: usuario.nome, imagem: usuario.avatar, com: usuario.id
@@ -56,9 +56,12 @@ export default {
                let dados = doc.data()
                if (dados.conversas) {
                     let conversas = [...dados.conversas]
-
+    
                     conversas.sort((a, b) => {
                         if (a.dataUltimaMensagem === undefined) {
+                           return -1
+                        }
+                        if (b.dataUltimaMensagem === undefined) {
                            return -1
                         }
                         if (a.dataUltimaMensagem.seconds < b.dataUltimaMensagem.seconds) {
@@ -68,7 +71,7 @@ export default {
                            return -1
                         }
                     })
-
+    
                     setListaConversa(dados.conversas)
                }
            }
@@ -91,7 +94,7 @@ export default {
                tipo: tipo, autor: idUsuario, corpo: corpo, data: agora
            })
         })
-
+    
         for (let i in usuarios) {
             let u = await db.collection('usuarios').doc(usuarios[i]).get()
             let dadosU = u.data()
@@ -99,7 +102,7 @@ export default {
             if (dadosU.conversas) {
                 let conversas = [...dadosU.conversas]
                 for (let e in conversas) {
-                    if (conversas[e].chatId == dadosConversa.chatId) {
+                    if (conversas[e].chatId === dadosConversa.chatId) {
                        conversas[e].ultimaMensagem = corpo
                        conversas[e].dataUltimaMensagem = agora
                     }
@@ -112,3 +115,5 @@ export default {
         }
     }
 }
+
+export default exportar

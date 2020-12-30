@@ -4,7 +4,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import Api from '../Api'
 
 
-export default function NovaConversa({ avatares, mostrar, setMostrar, usuario, listaconversas }) {
+export default function NovaConversa({ mostrar, setMostrar, usuario }) {
 
       const [lista, setLista] = useState([])
 

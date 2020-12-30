@@ -8,10 +8,6 @@ import SearchIcon from '@material-ui/icons/Search'
 import ItemListaConversa from './components/itemListaConversa'
 import IntroConversa from './components/IntroConversa.js'
 import JanelaConversa from './components/JanelaConversa'
-import avatar1 from './imagens/avatar-1.png'
-import avatar2 from './imagens/avatar-2.png'
-import avatar3 from './imagens/avatar-3.png'
-import avatar4 from './imagens/avatar-4.png'
 import NovaConversa from './components/NovaConversa'
 import Login from './components/Login'
 import Api from './Api'
@@ -52,8 +48,7 @@ export default function App() {
       return (
           <div className="app-janela">
               <div className="barralateral">
-                  <NovaConversa avatares={[avatar1, avatar2, avatar3, avatar4]}
-                                usuario={usuario}
+                  <NovaConversa usuario={usuario}
                                 listaconversas={listaconversas}
                                 mostrar={mostrarNovaConversa}
                                 setMostrar={setMostrarNovaConversa} />

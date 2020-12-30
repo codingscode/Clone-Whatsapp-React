@@ -65,7 +65,7 @@ export default function JanelaConversa({ usuario, dados }) {
       }
 
       const gerenEntradaTeclado = (evento) => {
-          if (evento.keyCode == 13) {
+          if (evento.keyCode === 13) {
               gerenClicarEnviar()
           }
       }
@@ -134,7 +134,7 @@ export default function JanelaConversa({ usuario, dados }) {
                                onKeyUp={gerenEntradaTeclado} />
                     </div>
                     <div className="janelaconversa--pos">
-                        {texto == '' &&
+                        {texto === '' &&
                             <div className="janelaconversa--botao" onClick={gerenClicarMic}>
                                 <MicIcon style={{color: ouvindo ? '#126ECE' : '#919191'}} />
                             </div>
